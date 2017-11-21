@@ -2,6 +2,15 @@
   "name": "react-redux-testing-examples",
   "version": "0.1.0",
   "private": true,
+  "homepage": "http://clairethompson.github.io/react-redux-testing-examples",
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "mocha \"spec/**/*.spec.js\" --require babel-core/register -r jsdom-global/register",
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
+  },
   "dependencies": {
     "babel-preset-env": "^1.6.1",
     "babel-preset-es2016": "^6.24.1",
@@ -11,16 +20,11 @@
     "react-scripts": "1.0.17",
     "redux": "^3.7.2"
   },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "mocha \"spec/**/*.spec.js\" --require babel-core/register -r jsdom-global/register",
-    "eject": "react-scripts eject"
-  },
   "devDependencies": {
     "chai": "^4.1.2",
     "enzyme": "^3.2.0",
     "enzyme-adapter-react-16": "^1.1.0",
+    "gh-pages": "^1.1.0",
     "jsdom": "^11.4.0",
     "jsdom-global": "^3.0.2",
     "mocha": "^4.0.1",
